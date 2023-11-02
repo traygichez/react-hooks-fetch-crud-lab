@@ -31,12 +31,12 @@ function QuestionForm({onSubmitQuestion}) {
         "correctIndex": parseInt(formData.correctIndex, 10)
       })
     })
-    .then(r => r.json())
+    .then(resp => resp.json())
     .then(data => onSubmitQuestion(data))
   }
 
   return (
-    <container>
+    <section>
       <h1>New Question</h1>
       <form onSubmit={handleSubmit}>
         <label>
@@ -99,7 +99,7 @@ function QuestionForm({onSubmitQuestion}) {
         </label>
         <button type="submit">Add Question</button>
       </form>
-    </container>
+    </section>
   );
 }
 
